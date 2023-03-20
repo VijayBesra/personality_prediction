@@ -1,0 +1,56 @@
+.heading-h3 {
+    font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+    color: #071518;
+    font-size: 35px;
+    font-weight: 600;
+    margin: 2%;
+    font-family: sans-serif;
+}
+
+.personalityType {
+    padding: 1%;
+    font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.greeting-p {
+    text-shadow: 0px 1px 2px rgb(83, 82, 82);
+    color: #003049;
+    font-weight: 500;
+    font-size: 35px;
+    display: block;
+    margin-left: 2%;
+    width: fit-content;
+    border-radius: 5px;
+    margin-left: 7%;
+
+}
+
+.introductory-div {
+    font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+    width: 80%;
+    word-wrap: break-word;
+    border-radius: 5px;
+    line-height: 3rem;
+    text-shadow: 0px 1px 2px rgb(83, 82, 82);
+    color: #003049;
+    font-weight: 400;
+    font-size: 35px;
+    padding: 2%;
+    margin-left: 7%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.introductory-div:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+}
+
+.trait-span {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 36px;
+    text-decoration: underline;
+}

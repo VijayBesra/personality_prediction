@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles.css') }}">
+    <title>Personality Classification</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="heading mainHeading">Describe Yourself:</h1>
+
+    <form method="post" id="nameform" onsubmit="return checkInput()">
+
+        <!-- <ul>
+        <li>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
+            <input id="qone1" name=one type=radio><label id="one1" for=qone1 onclick="changeColor('one1', 'one2', 'one3')">agree</label>
+            <input id="qone2" name=one type=radio><label id="one2" for=qone2 onclick="changeColor('one2', 'one1', 'one3')">not sure</label>
+            <input id="qone3" name=one type=radio><label id="one3" for=qone3 onclick="changeColor('one3', 'one1', 'one2')">disagree</label>
+        </li>
+        <li>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
+            <input id="qtwo1" name=two type=radio><label id="two1" for=qtwo1 onclick="changeColor('two1', 'two2', 'two3')">agree</label>
+            <input id="qtwo2" name=two type=radio><label id="two2" for=qtwo2 onclick="changeColor('two2', 'two1', 'two3')">not sure</label>
+            <input id="qtwo3" name=two type=radio><label id="two3" for=qtwo3 onclick="changeColor('two3', 'two1', 'two2')">disagree</label>
+        </li>
+        <li>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
+            <input id="qthree1" name=three type=radio><label id="three1" for=qthree1 onclick="changeColor('three1', 'three2', 'three3')">agree</label>
+            <input id="qthree2" name=three type=radio><label id="three2" for=qthree2 onclick="changeColor('three2', 'three1', 'three3')">not sure</label>
+            <input id="qthree3" name=three type=radio><label id="three3" for=qthree3 onclick="changeColor('three3', 'three1', 'three2')">disagree</label>
+        </li>
+        <li>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
+            <input id="qfour1" name=four type=radio><label id="four1" for=qfour1 onclick="changeColor('four1', 'four2', 'four3')">agree</label>
+            <input id="qfour2" name=four type=radio><label id="four2" for=qfour2 onclick="changeColor('four2', 'four1', 'four3')">not sure</label>
+            <input id="qfour3" name=four type=radio><label id="four3" for=qfour3 onclick="changeColor('four3', 'four1', 'four2')">disagree</label>
+        </li>
+        <li>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
+            <input id="qfive1" name=five type=radio><label id="five1" for=qfive1 onclick="changeColor('five1', 'five2', 'five3')">agree</label>
+            <input id="qfive2" name=five type=radio><label id="five2" for=qfive2 onclick="changeColor('five2', 'five1', 'five3')">not sure</label>
+            <input id="qfive3" name=five type=radio><label id="five3" for=qfive3 onclick="changeColor('five3', 'five1', 'five2')">disagree</label>
+        </li>
+        <li>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
+            <input id="qsix1" name=six type=radio><label id="six1" for=qsix1 onclick="changeColor('six1', 'six2', 'six3')">agree</label>
+            <input id="qsix2" name=six type=radio><label id="six2" for=qsix2 onclick="changeColor('six2', 'six1', 'six3')">not sure</label>
+            <input id="qsix3" name=six type=radio><label id="six3" for=qsix3 onclick="changeColor('six3', 'six1', 'six2')">disagree</label>
+        </li>
+        <li>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
+            <input id="qseven1" name=seven type=radio><label id="seven1" for=qseven1 onclick="changeColor('seven1', 'seven2', 'seven3')">agree</label>
+            <input id="qseven2" name=seven type=radio><label id="seven2" for=qseven2 onclick="changeColor('seven2', 'seven1', 'seven3')">not sure</label>
+            <input id="qseven3" name=seven type=radio><label id="seven3" for=qseven3 onclick="changeColor('seven3', 'seven1', 'seven2')">disagree</label>
+        </li>
+        <li>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
+            <input id="qeight1" name=eight type=radio><label id="eight1" for=qeight1 onclick="changeColor('eight1', 'eight2', 'eight3')">agree</label>
+            <input id="qeight2" name=eight type=radio><label id="eight2" for=qeight2 onclick="changeColor('eight2', 'eight1', 'eight3')">not sure</label>
+            <input id="qeight3" name=eight type=radio><label id="eight3" for=qeight3 onclick="changeColor('eight3', 'eight1', 'eight2')">disagree</label>
+        </li>
+        <li>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
+            <input id="qnine1" name=nine type=radio><label id="nine1" for=qnine1 onclick="changeColor('nine1', 'nine2', 'nine3')">agree</label>
+            <input id="qnine2" name=nine type=radio><label id="nine2" for=qnine2 onclick="changeColor('nine2', 'nine1', 'nine3')">not sure</label>
+            <input id="qnine3" name=nine type=radio><label id="nine3" for=qnine3 onclick="changeColor('nine3', 'nine1', 'nine2')">disagree</label>
+        </li>
+        <li>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit?</h3>
+            <input id="qten1" name=ten type=radio><label id="ten1" for=qten1 onclick="changeColor('ten1', 'ten2', 'ten3')">agree</label>
+            <input id="qten2" name=ten type=radio><label id="ten2" for=qten2 onclick="changeColor('ten2', 'ten1', 'ten3')">not sure</label>
+            <input id="qten3" name=ten type=radio><label id="ten3" for=qten3 onclick="changeColor('ten3', 'ten1', 'ten2')">disagree</label>
+        </li>
+    </ul> -->
+
+        <input required id="inputText" autocomplete="off" type="text" name="formInput" placeholder="Introduce yourself" autofocus />
+        <ul class="requiredFromYou">
+            <li>*Please Be more descriptive</li>
+            <li>*Please Write atleast one complete sentence</li>
+            <li>*Input should be atleast <b>30 words long</b></li>
+        </ul>
+
+        <button class="submitButton" type="submit">Submit</button>
+    </form>
+    <script src="{{ url_for('static', filename='/app.js') }}"></script>
+</body>
+
+</html>

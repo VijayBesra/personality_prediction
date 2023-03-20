@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/result.css') }}">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
+    <title>Personality Classification</title>
+</head>
+
+<body onload="knowMore('{{personalityType}}','{{jsonData}}')">
+    <h1 class="heading">Your result</h1>
+    <p class="heading-h3">Your personality type is: <span class="personalityType">{{personalityType}}</span></p>
+    <!-- <img style="margin: 20px; border-radius: 10px;" src="images/output.png" alt=""><br> -->
+    <!-- <button class="know-more-btn" onclick="knowMore('{{personalityType}}','{{jsonData}}')">Know More</button> -->
+    
+    <p id="mainContent"></p>
+
+    <script src="{{ url_for('static', filename='/result.js') }}"></script>
+</body>
+
+</html>
